@@ -1,0 +1,14 @@
+[package]
+org = "dilanperera"
+name = "twillio_test"
+version = "0.1.0"
+distribution = "2201.8.0"
+
+[[dependency]]
+org="ballerinax"
+name = "twilioresource"
+version = "2.0.0"
+repository = "local"
+
+[build-options]
+observabilityIncluded = true
