@@ -37,6 +37,7 @@ twilio:Client twilioClient = check new (twilioConfig);
 twilioresource:Client twilioClientResource = check new (conf_resource);
 twilioremote:Client twilioClientRemote = check new (conf_remote);
 
+//Resource Function Based
 public function listAccountsResource() returns error? {
     log:printInfo("Twilio client created.");
     twilioresource:ListAccountResponse? responce = check twilioClientResource->/Accounts;
@@ -47,6 +48,7 @@ public function listAccountsResource() returns error? {
     }
 }
 
+//Remote Function Based
 public function listAccountsRemote() returns error? {
     twilioremote:ListAccountResponse? responce = check twilioClientRemote->listAccount();
     if (responce is twilioremote:ListAccountResponse) {
@@ -141,6 +143,7 @@ public function createCall() returns error? {
     }
 }
 
+//Resource Function Based
 public function listSipIPAddressesResource() returns error? {
     string sip = "TKa91eff2f86181ed4a60f2000d7b2f833";
     twilioresource:ListSipIpAddressResponse? responce = check twilioClientResource->/Accounts/[accountSid]/SIP/IpAccessControlLists/[sip]/IpAddresses;
@@ -152,6 +155,7 @@ public function listSipIPAddressesResource() returns error? {
     }
 }
 
+//Remote Function Based
 public function listSipIPAddressesRemote() returns error? {
     string sip = "TKa91eff2f86181ed4a60f2000d7b2f833";
     twilioremote:ListSipIpAddressResponse? responce = check twilioClientRemote->listSipIpAddress(accountSid, sip);
