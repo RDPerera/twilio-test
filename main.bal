@@ -4,8 +4,8 @@ import ballerinax/twilioremote;
 import ballerinax/twilioresource;
 import ballerinax/twilio;
 
-string accountSid = "AC5cd0a8be91f091f37f9b40bc68c26e55";
-string authToken = "f0d66587d88a03e651a0e20d5c43e3e2";
+string accountSid = "AC5cd0a8be91f091f37f9b40bc68c26e55x";
+string authToken = "f0d66587d88a03e651a0e20d5c43e3e2x";
 string toPhoneNumber = "+94712479175";
 string fromPhoneNumber = "+16513215786";
 string messageBody = "Hello from Ballerina!";
